@@ -85,6 +85,62 @@ function wholeFunction(x){
 
 document.getElementById("whole").innerHTML = wholeFunction(45)
 
+// A function that preforms multiplication and division operation depending on conditions
+function oprFunction(a,b){
+    if(a < b){
+        result = a / b
+        return result
+    }else{
+        result = a * b
+        return result
+    }
+}
+
+document.getElementById("opr").innerHTML = oprFunction(8,20)
+
+// A function that rounds up a number to 2 decimal places
+function decFunction(a){
+    result = a.toFixed(2);
+    return result;
+
+}
+
+document.getElementById("dec").innerHTML = decFunction(12.246);
+
+// A function that splits a number into its digits
+function splitFunction(a){
+    let x = a.toString();
+    let y = x.split("")
+    return y
+}
+
+document.getElementById("dig").innerHTML = "[" + splitFunction(193278) + "]";
+
+// A function that clears up the chaos within a string and concatenates
+function chaosFunction(a,b){
+
+        b_arr = b.split("");
+        b_rev = b_arr.reverse();
+        b_new = b_rev.join("");
+
+        if(b_new.includes("%") == true){
+            b_new_str = b_new.replace("%","")
+            result = a.concat(b_new_str)
+            document.getElementById("chaos").innerHTML = result 
+        }else{
+            result = a.concat(b_new)
+            document.getElementById("chaos").innerHTML = result
+        }
+    }
+
+
+chaosFunction('Java','tp%ircs')
+
+
+
+
+
+
 
 
 
